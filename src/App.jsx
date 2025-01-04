@@ -36,6 +36,7 @@ function App() {
     const errors = validate(formValues);
     setFormErrors(errors);
     setIsSubmit(true);
+    console.log(errors)
   
     if (Object.keys(errors).length === 0) {
       const formData = new FormData();
@@ -54,7 +55,7 @@ function App() {
       }
   
       // Send the POST request to your Apps Script endpoint
-      fetch("https://script.google.com/macros/s/AKfycbytbaU9B12mvTymkB3Mm8eCD6cdpYPS2M-rxzFdLYKamSi3kDIh1PrWxaoAsvO4kfQi/exec", {
+      fetch("https://script.google.com/macros/s/AKfycbxI8SrdrG24q2JA0gMTMgqg73paHOOVCIUL950IJqKP8aLCVXXdwOmXkvjy4EZzHjtXfQ/exec", {
         method: "POST",
         body: formData,
         headers: {
@@ -331,7 +332,7 @@ function App() {
         <span></span>
         <span></span>
         <span></span>
-        <button className="fluid ui button blue" type="submit">SUBMIT</button>
+        <button className="fluid ui button blue" type="submit" >SUBMIT</button>
       </form>
     </div>
   );
